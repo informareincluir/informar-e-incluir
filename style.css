@@ -1,0 +1,200 @@
+/* ===========================
+   RESET & FONTE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* ===========================
+   BODY & BACKGROUND
+=========================== */
+body {
+  background: linear-gradient(180deg, #fff6f6 0%, #ffeaea 100%);
+  color: #2d0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: opacity 0.6s ease, background 0.8s ease;
+}
+
+/* ===========================
+   CONTAINER PRINCIPAL
+=========================== */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 26px;
+  text-align: center;
+  animation: contentFadeIn 0.9s ease forwards;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+h1, h2, h3 {
+  color: #a80000;
+  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; }
+
+p {
+  color: #3a0000;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+ul { 
+  text-align: left;
+  margin: 10px 0 16px 0;
+  padding-left: 20px;
+  color: #2d0000;
+  line-height: 1.6;
+}
+
+/* Citation / highlight */
+.citacao {
+  background: #fff4f4;
+  border-left: 4px solid #b30000;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 12px 0;
+  color: #3a0000;
+}
+
+/* ===========================
+   BOTÕES PRINCIPAIS / LINKS
+=========================== */
+.botoes, .button-container {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  background: #b30000;
+  color: #fff;
+  padding: 11px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(179,0,0,0.12);
+  transition: transform 0.22s ease, background 0.22s ease;
+}
+
+.btn.secondary {
+  background: #3a0000;
+  box-shadow: 0 6px 18px rgba(58,0,0,0.08);
+}
+
+.btn:hover { transform: translateY(-3px); }
+.btn:active { transform: translateY(-1px) scale(0.995); }
+
+/* ===========================
+   PRÓXIMA ESTAÇÃO (seta centralizada)
+=========================== */
+.proxima-estacao {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.proxima-estacao p {
+  font-size: 0.95rem;
+  color: #5b0000;
+  font-weight: 600;
+}
+
+.seta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: #b30000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  box-shadow: 0 6px 18px rgba(179,0,0,0.18);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.seta:hover { transform: scale(1.08); background: #d00000; }
+
+/* ===========================
+   VÍDEO
+=========================== */
+.video-container {
+  margin: 14px 0;
+  text-align: center;
+}
+
+.video-container video, .video-player {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  outline: none;
+}
+
+/* ===========================
+   IMAGENS (colares)
+=========================== */
+.colar-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  margin: 10px 0 14px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===========================
+   ANIMAÇÃO
+=========================== */
+.fade-in { opacity: 0; }
+@keyframes contentFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* corpo fade-out usado em transições */
+body.fade-out {
+  opacity: 0;
+  background: linear-gradient(180deg, #fff1f1 0%, #ffd8d8 100%);
+}
+
+/* ===========================
+   RESPONSIVIDADE (mobile-first)
+=========================== */
+@media (max-width: 720px) {
+  .container { padding: 18px; border-radius: 12px; }
+  h1 { font-size: 1.4rem; }
+  p, ul li { font-size: 0.98rem; }
+  .seta { width: 52px; height: 52px; font-size: 1.25rem; }
+}
+
+@media (max-width: 420px) {
+  h1 { font-size: 1.2rem; }
+  .btn { width: 100%; padding: 12px; }
+  .seta { width: 48px; height: 48px; font-size: 1.15rem; }
+}
